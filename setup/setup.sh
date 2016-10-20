@@ -1,16 +1,15 @@
 sudo pip install selenium
 sudo pip install beautifulsoup4
 sudo pip install wget
-# for using firefox as browser
-sudo apt-get install firefox
 sudo apt-get install xvfb
 sudo pip install pyvirtualdisplay
 sudo pip install lxml
+sudo apt-get unzip
 
-# for latest version https://github.com/mozilla/geckodriver/releases
-wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz
-tar zxvf geckodriver-v0.11.1-linux64.tar.gz
-rm geckodriver-v0.11.1-linux64.tar.gz
-# modify the directory
-export PATH=$PATH:/home/michael50602/PPAV/geckodriver
-
+# install chrome browser & driver
+#sudo apt-get install gdebi
+#sudo gdebi ./setup/google-chrome-stable_current_amd64.deb
+wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip 
+unzip chromedriver_linux64.zip
+sudo mv chromedriver /usr/bin/
+sudo chmod a+x chromedriver

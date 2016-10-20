@@ -18,7 +18,7 @@ tst_url = "http://xonline.vip/watch-hbad-317-i-fucked-the-yoshikarada-natural-de
 driver = webdriver.Chrome() # if you want to use chrome, replace Firefox() with Chrome()
 driver.get(tst_url) # load the web page
 
-WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.CLASS_NAME, "jw-media jw-reset"))) # waits till the element with the specific id appears
+WebDriverWait(driver, 50).until(EC.visibility_of_element_located((By.CLASS_NAME, "jw-media jw-reset"))) # waits till the element with the specific id appears
 src = driver.page_source # gets the html source of the page
 
 parser = BeautifulSoup(src,"lxml") # initialize the parser and parse the source "src"
